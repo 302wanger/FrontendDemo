@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<script>
+ 
+
+  function judge (x) {
+    let num = 0;
+    for (let i = 0; i < n; i++)
+      num += Math.floor(L[i] / x);
+    return num >= k;
+  }
+
+  function solve () {
+    let left = 0, right = inf;
+    for (let i = 0; i < 100; i++) //代替while(r>l) 避免了精度问题
+    { //1次循环可以把区间缩小一半，100次可以达到10^(-30)的精度
+      let mid = (left + right) / 2;
+      if (judge(mid)) left = mid;
+      else right = mid;
+    }
+    return Math.floor(right * 100) / 100;
+  }
+
+  function main(N, M, L){
+    if(M<=N){
+      return Math.min(...L);
+    }
+
+  }
+
+</script>
+</body>
+</html>

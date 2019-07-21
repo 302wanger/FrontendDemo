@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+  function validate (str) {
+    let strArr = str.split('');
+    for (let i = 0; i < strArr.length; i++) {
+      let a = strArr[i];
+      if (a === strArr[i + 1]) {
+        if (a === strArr[i + 2]) {
+          strArr.splice(i + 2, 1);
+          i--;
+        } else {
+          if (strArr[i + 2] === strArr[i + 3]) {
+            strArr.splice(i + 3, 1);
+            i--;
+            // break;
+          }
+          // for (let j = i + 1; j < strArr.length; j++) {
+          //
+          // }
+        }
+
+      }
+    }
+    return strArr.join('')
+  }
+
+  console.log(validate('abaabbbccccccccccdd'));
+
+  console.log(validate('woooooow'))
+</script>
+</body>
+</html>

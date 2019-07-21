@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19-弹出框和警告框</title>
+    <link rel="stylesheet" href="../Lib/bootstrap.min.css">
+    <script type="text/javascript" src="../Lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../Lib/bootstrap.min.js"></script>
+
+
+</head>
+<body style="margin: 50px;">
+<!--弹出框-->
+<button class="btn btn-lg btn-info" type="button"
+        data-placement="auto left"
+        data-delay="500"
+        data-toggle="popover" title="弹出框" data-content="toggle() 方法切换元素的可见状态。 如果被选元素可见,则隐藏这些元素,如果被选元素隐藏,则显示这些元素。 语法 $(selector).toggle(speed,callback,switch) 参数描..内容">
+    点击弹出/隐藏弹出框
+</button>
+
+<!--警告框-->
+<div class="alert alert-warning fade in">
+    <!--bootstrap的data-dismiss="alert"方法-->
+    <button class="close" type="button" >
+        <span>&times;</span>
+    </button>
+    <p>警告：你的浏览器不支持</p>
+</div>
+
+<div class="alert alert-warning  "></div>
+
+<script>
+    $('.close').on('click',function () {
+        $('p').alert('close');
+    })
+</script>
+
+<script>
+    $('button').popover();
+</script>
+</body>
+</html>

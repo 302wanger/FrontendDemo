@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15-模态框插件</title>
+    <!--<link rel="stylesheet" href="../Lib/bootstrap.min.js">-->
+    <link rel="stylesheet" href="../Lib/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="../Lib/jquery-3.1.1.min.js">-->
+    <!--<link rel="stylesheet" href="../Lib/bootstrap.min.mystyle">-->
+    <script src="../Lib/jquery-3.1.1.min.js"></script>
+    <script src="../Lib/bootstrap.min.js"></script>
+</head>
+<body style="margin: 100px;">
+<!--登录界面-----模态框声明-->
+<div class="modal fade" id="myModal1">
+    <!--窗口声明-->
+    <div class="modal-dialog" >
+        <!--内容声明-->
+        <div class="modal-content" style="padding: 0px 100px 0px ;">
+            <!--头部-->
+            <div class="modal-heading" style="text-align: center">
+                <h3 class="">会员登录</h3>
+            </div>
+
+            <!--主体-->
+            <div class="modal-body">
+                <div class="input-group">
+                <span class="input-group-addon  "></span>
+                <input type="text" class="form-control" placeholder="请输入用户名/邮箱/电话">
+                <span class="input-group-addon  "></span>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon"></span>
+                    <input type="password" class="form-control" placeholder="请输入密码">
+                    <span class="input-group-addon"></span>
+                </div>
+            </div>
+
+            <!--脚部-->
+            <div class="modal-footer">
+                <button class="btn btn-info">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--注册界面----- 模态框声明-->
+<div class="modal fade" id="myModal2">
+    <!--窗口声明-->
+    <div class="modal-dialog" >
+        <!--内容声明-->
+        <div class="modal-content" style="padding: 0px 100px 0px ;">
+            <!--&lt;!&ndash;头部&ndash;&gt;-->
+            <!--<div class="modal-heading" style="text-align: center">-->
+                <!--<h3 class="">新用户注册</h3>-->
+            <!--</div>-->
+
+            <!--&lt;!&ndash;主体&ndash;&gt;-->
+            <!--<div class="modal-body">-->
+                <!--<div class="input-group">-->
+                    <!--<span class="input-group-addon  ">用户名</span>-->
+                    <!--<input type="text" class="form-control" placeholder="用户名以字符开头">-->
+                    <!--<span class="input-group-addon "></span>-->
+                <!--</div>-->
+                <!--<br>-->
+                <!--<div class="input-group">-->
+                    <!--<span class="input-group-addon ">手机号码</span>-->
+                    <!--<input type="text" class="form-control" placeholder="请输入手机号码">-->
+                    <!--<span class="input-group-addon  "></span>-->
+                <!--</div>-->
+                <!--<br>-->
+                <!--<div class="input-group">-->
+                    <!--<span class="input-group-addon">邮箱</span>-->
+                    <!--<input type="text" class="form-control" placeholder="请输入邮箱">-->
+                    <!--<span class="input-group-addon"></span>-->
+                <!--</div>-->
+                <!--<br>-->
+                <!--<div class="input-group">-->
+                    <!--<span class="input-group-addon">密码</span>-->
+                    <!--<input type="text" class="form-control" placeholder="请设置一个6位密码">-->
+                    <!--<span class="input-group-addon"></span>-->
+                <!--</div>-->
+                <!--<br>-->
+                <!--<div class="input-group">-->
+                    <!--<span class="input-group-addon">密码确认</span>-->
+                    <!--<input type="text" class="form-control" placeholder="请再次输入密码">-->
+                    <!--<span class="input-group-addon"></span>-->
+                <!--</div>-->
+                <!--<br>-->
+                <!--</div>-->
+
+            <!--&lt;!&ndash;脚部&ndash;&gt;-->
+            <!--<div class="modal-footer">-->
+                <!--<button class="btn btn-info">注册</button>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+<!--注册界面----- 模态框声明-->
+<div class="modal fade" id="myModal3">
+    <!--窗口声明-->
+    <div class="modal-dialog" >
+        <!--内容声明-->
+        <div class="modal-content" style="padding: 0px 100px 0px ;">
+
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">点击注册</button>
+<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">点击登录</button>
+<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModel3" href="16.html">Register</button>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <link rel="stylesheet" href="../Lib/bootstrap.min.css">
+    <script type="text/javascript" src="../Lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../Lib/bootstrap.min.js"></script>
+    <script>
+        window.onload=function () {
+            $('#nav a').on('click',function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            })
+
+            $('#nav a').on('show.bs.tab',function () {
+                alert('调用Tab时触发');
+            })
+        }
+    </script>
+</head>
+<body style="margin: 50px">
+<!--BootStrap方法调用-->
+<!--<ul class="nav nav-tabs">-->
+    <!--<li class="active"><a href="#html5" data-toggle="tab">HTML5</a></li>-->
+    <!--<li><a href="#css" data-toggle="tab">CSS3</a></li>-->
+    <!--<li><a href="#jquery" data-toggle="tab">JQuery</a></li>-->
+    <!--<li><a href="#bootstrap" data-toggle="tab">BootStrap</a></li>-->
+<!--</ul>-->
+
+<!--JS方法调用-->
+<ul class="nav nav-tabs" id="nav">
+    <li class="active"><a href="#html5" >HTML5</a></li>
+    <li><a href="#css" >CSS3</a></li>
+    <li><a href="#jquery" >JQuery</a></li>
+    <li><a href="#bootstrap" >BootStrap</a></li>
+</ul>
+
+<div class="tab-content" style="margin: 20px">
+    <div class="tab-pane fade in active" id="html5">这是HTML5..........</div>
+    <div class="tab-pane fade" id="css">这是CSS,,,,,,,,,,,</div>
+    <div class="tab-pane fade" id="jquery">这是JQueryaaaaaaaaaaaaa</div>
+    <div class="tab-pane fade" id="bootstrap">这是BootStrapzzzzzzzzzzaa</div>
+</div>
+
+
+</body>
+</html>

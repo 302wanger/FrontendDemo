@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<script>
+  for(let i =0; i<n ; i++){
+    let m = parseInt(readline());
+    let line = readline().split(' ');
+    let arr = [];
+    for(let j = 0; j<m ; j++){
+      arr.push(parseInt(line[j]))
+    }
+    let res = min(arr);
+    print(res);
+
+  }
+
+
+  function min (ratings) {
+    let length = ratings.length;
+    let candy = [];
+    let sum = 0;
+    if (ratings.length === 1) {
+      return 1
+    }
+    for (let i = 0; i < length; i++) {
+      candy.push(1); //先将每人的值都设为1
+    }
+
+
+    //从前向后扫描
+    for (let i = 1; i < length; i++) {
+      if (ratings[i] > ratings[i - 1]) candy[i] = candy[i - 1] + 1;
+    }
+
+    //从后向前扫描
+    for (let i = length - 2; i >= 0; i--) {
+      if (ratings[i] > ratings[i + 1] && candy[i] < candy[i + 1]) candy[i] = candy[i + 1] + 1;
+    }
+
+
+    for (let i = 0; i < length; i++)
+      sum += candy[i];
+
+    return sum;
+
+  }
+
+  console.log(min([1, 2,3,4]))
+
+</script>
+</body>
+</html>

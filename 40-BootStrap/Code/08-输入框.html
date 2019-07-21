@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入框</title>
+    <link rel="stylesheet" href="../Lib/bootstrap.min.css">
+    <script src="../Lib/jquery-3.1.1.min.js"></script>
+    <script src="../Lib/bootstrap.min.js"></script>
+</head>
+<body style="margin: 50px;">
+<div class="input-group">
+    <span class="input-group-addon">@</span>
+    <input type="text" class="form-control">
+    <span class="input-group-addon">@163.com</span>
+</div>
+<br>
+
+<!--左侧使用单选框-->
+<div class="input-group">
+    <span class="input-group-addon">
+    <input type="radio"></span>
+    <input type="text" class="form-control">
+    <!--<span class="input-group-addon">@163.com</span>-->
+</div>
+
+<br>
+<!--左侧使用下拉菜单或分列式-->
+<div class="input-group">
+    <input type="text" class="form-control">
+    <span class="input-group-btn">
+     <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        下拉菜单
+         <span class="caret"></span>
+    </button>
+        <ul class="dropdown-menu ">
+            <li class="dropdown-header">导航</li>
+            <li><a href="#" class="">首页</a></li>
+            <li><a href="#" class="">简介</a></li>
+            <li><a href="#" class="">机构</a></li>
+            <li><a href="#" class="">关于</a></li>
+            <li><a href="#" class="">帮助</a></li>
+        </ul>
+    </span>
+</div>
+<br>
+
+<div class="">
+    <!--常规导航栏-->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="">HOME</a></li>
+        <li><a href="">START</a></li>
+        <li><a href="">ABOUT</a></li>
+        <li><a href="">HELP</a></li>
+    </ul>
+    <br>
+    <!--胶囊式导航栏-->
+    <ul class="nav nav-pills nav-justified" >
+        <li class="active"><a href="">HOME</a></li>
+        <li><a href="">START</a></li>
+        <li><a href="">ABOUT</a></li>
+        <li><a href="">HELP</a></li>
+    </ul>
+    <br>
+    <!--垂直胶囊式导航栏-->
+    <!--nav-stacked导航两端对齐-->
+    <ul class="nav nav-pills nav-stacked ">
+        <li class="active"><a href="">HOME</a></li>
+        <li><a href="">START</a></li>
+        <li><a href="">ABOUT</a></li>
+        <li><a href="">HELP</a></li>
+    </ul>
+    <br>
+
+    <!--带下拉的导航-->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="">HOME</a></li>
+        <li><a href="">START</a></li>
+        <li><a href="">ABOUT</a></li>
+        <li><a href="">HELP</a></li>
+        <li class="dropdown">
+            <a herf="#" class="dropdown-toggle " data-toggle="dropdown">
+                下拉菜单
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+        </li>
+
+
+    </ul>
+</div>
+
+
+</body>
+</html>

@@ -122,6 +122,7 @@ class LinkedList {
     return this.head;
   }
 
+
   toString () {
     let current = this.head;
     let string = '';
@@ -134,5 +135,5 @@ class LinkedList {
 }
 
 
-module.exports = LinkedList;
+// module.exports = LinkedList;
 

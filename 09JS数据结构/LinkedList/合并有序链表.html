@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script src="LinkedList.js"></script>
+<script>
+  function Merge (pHead1, pHead2) {
+    // write code here
+
+
+    if (!pHead1) {
+      return pHead2 ? pHead2 : null
+    }
+    if (!pHead2) {
+      return pHead1
+    }
+    // 比较代码 -非递归
+    /*
+    let cur1 = pHead1;
+     let cur2 = pHead2;
+     let result = new LinkedList();
+     let cur = result;
+     while (cur1 && cur2) {
+       if (cur1.element < cur2.element) {
+         cur.next = cur1;
+         cur1 = cur1.next;
+       } else {
+         cur.next = cur2;
+         cur2 = cur2.next;
+       }
+       cur = cur.next
+     }
+     if (cur1) {
+       cur.next = cur1;
+     }
+     if (cur2) {
+       cur.next = cur2;
+     }
+     // console.log(result);
+     return result.next;
+     */
+
+
+    // 递归版本
+    if (pHead1.element < pHead2.element) {
+      pHead1.next= Merge(pHead1.next, pHead2);
+      return pHead1;
+    }else{
+      pHead2.next= Merge(pHead1, pHead2.next);
+      return pHead2
+    }
+  }
+
+  let link1 = new LinkedList();
+  link1.append(1);
+  link1.append(3);
+  link1.append(5);
+  link1.append(7);
+  let link2 = new LinkedList();
+  link2.append(2);
+  link2.append(4);
+  link2.append(6);
+  link2.append(8);
+
+  console.log(Merge(link1.getHead(), link2.getHead()));
+
+
+</script>
+</body>
+</html>
