@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+</head>
+<body>
+
+
+<style>
+    body{
+        height: 100vh;
+        width: 100%;
+        position: relative;
+    }
+    .container {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: red;
+
+        /*animation: layout 1.2s ease-in-out infinite;*/
+        animation: trans 1.2s ease-in-out infinite;
+    }
+    .container1 {
+        position: relative;
+        width: 200px;
+        height: 100px;
+        background: yellow;
+    }
+
+    @keyframes trans {
+        0% {
+            -webkit-transform: translate(0);
+        }
+        50% {
+            transform: translate(500px,500px);
+        }
+        100% {
+            -webkit-transform: translate(0);
+        }
+    }
+
+    @keyframes layout {
+        0% {
+            top: 0;
+            left: 0;
+        }
+        50% {
+            top: 500px;
+            left: 500px;
+        }
+        100% {
+            top: 0;
+            left: 0;
+        }
+    }
+</style>
+<div class="container">
+    这是一个块
+</div>
+<div class="container1">
+    这是一个块
+</div>
+<div class="container">
+    这是一个块
+</div>
+
+</body>
+</html>
